@@ -1,0 +1,53 @@
+﻿@model MyCv.Models.TaxCalculatorModel
+@{
+    ViewData["Title"] = "Tax Calculator";
+}
+
+<div class="container mt-5">
+    <h2>Personal Income Tax Calculator</h2>
+    <p>Here is a tax calculator you can use to calculate your tax.</p>
+    <hr />
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Form starts here -->
+            @using (Html.BeginForm("TaxCalculator", "Home", FormMethod.Post))
+            {
+                <div class="form-group mb-3">
+                    <label class="form-label">Annual Income (₦)</label>
+                    @Html.TextBoxFor(m => m.AnnualIncome, new { @class = "form-control", type = "number", placeholder = "e.g. 5000000" })
+                </div>
+                <button type="submit" class="btn btn-primary">Calculate Tax</button>
+            }
+        </div>
+
+        <div class="col-md-6">
+            @if (Model != null && Model.AnnualIncome > 0)
+            {
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h4 class="card-title">Results (Annual)</h4>
+                        <table class="table">
+                            <tr>
+                                <td>Gross Income:</td>
+                                <td>₦@Model.AnnualIncome.ToString("N2")</td>
+                            </tr>
+                            <tr class="table-dark">
+                                <th>Annual Tax Payable:</th>
+                                <th>₦@Model.TaxPayable.ToString("N2")</th>
+                            </tr>
+                            <tr class="table-warning">
+                                <th>Monthly Tax:</th>
+                                <th>₦@Model.MonthlyTax.ToString("N2")</th>
+                            </tr>
+                            <tr class="table-info">
+                                <th>Net Income:</th>
+                                <th>₦@Model.NetIncome.ToString("N2")</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

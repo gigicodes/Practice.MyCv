@@ -1,6 +1,74 @@
 ﻿@{
     ViewData["Title"] = "Contact Me";
 }
-<h1>@ViewData["Title"]</h1>
 
-<p>Here are some ways you can contact me.</p>
+<div class="container mt-4">
+
+    <h1 class="mb-2">@ViewData["Title"]</h1>
+    <p>Here are some ways you can contact me.</p>
+
+    <div class="row">
+
+        <!-- Send a Message Form -->
+        <div class="col-md-7 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title mb-3">✉️ Send a Message</h5>
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" placeholder="Enter your name" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input type="email" class="form-control" placeholder="Enter your email" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Message</label>
+                        <textarea class="form-control" rows="5" placeholder="Write your message here..."></textarea>
+                    </div>
+                    <button class="btn btn-primary w-100">Send Message</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Options -->
+        <div class="col-md-5 mb-4">
+            <div class="card shadow-sm mb-3">
+                <div class="card-body d-flex align-items-center">
+                    
+                    <div>
+                        <h6 class="mb-0">Email</h6>
+                        <a href="mailto:gifftchiedozie@email.com" class="text-muted text-decoration-none">
+                            gifftchiedozie@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-3">
+                <div class="card-body d-flex align-items-center">
+                   
+                    <div>
+                        <h6 class="mb-0">GitHub</h6>
+                        <a href="https://github.com/gigicodes" target="_blank" class="text-muted text-decoration-none">
+                            github.com/gigicodes
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm mb-3">
+                <div class="card-body d-flex align-items-center">
+                   
+                    <div>
+                        <h6 class="mb-0">LinkedIn</h6>
+                        <a href="https://www.linkedin.com/in/chidinma-egbujuo-85063122a/" target="_blank" class="text-muted text-decoration-none">
+                            linkedin.com/in/chidinmaegbujuo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

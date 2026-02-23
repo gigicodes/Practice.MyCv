@@ -2,7 +2,56 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome To Gift's CV App</h1>
-    <p>Here you can explore the world of Gift as a developer, learn fun things she does and also calculate your taxes as a bonus.</p>
+<div class="container mt-4">
+
+    <!-- Hero Section -->
+    <div class="card shadow-sm border-0 bg-primary bg-opacity-10 mb-4">
+        <div class="card-body text-center py-5">
+            <h1 class="display-4 fw-bold text-primary">Welcome To Gift's CV App</h1>
+            <p class="lead text-muted mt-3">
+                Here you can explore the world of Gift as a developer, learn fun things she does 
+                and also calculate your taxes as a bonus.
+            </p>
+            <a asp-controller="Home" asp-action="MyCv" class="btn btn-primary mt-3 me-2">View My CV</a>
+            <a asp-controller="Home" asp-action="ContactMe" class="btn btn-outline-primary mt-3">Contact Me</a>
+        </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="row text-center">
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                    <span class="fs-1">👩‍💻</span>
+                    <h5 class="card-title mt-2">My CV</h5>
+                    <p class="card-text text-muted">Explore my skills, experience and background as a developer.</p>
+                    <a asp-controller="Home" asp-action="MyCv" class="btn btn-outline-primary btn-sm">View CV</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                    <span class="fs-1">🎨</span>
+                    <h5 class="card-title mt-2">Hobbies</h5>
+                    <p class="card-text text-muted">Get to know me beyond code — my passions and interests.</p>
+                    <a asp-controller="Home" asp-action="Hobbies" class="btn btn-outline-primary btn-sm">View Hobbies</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                    <span class="fs-1">✉️</span>
+                    <h5 class="card-title mt-2">Contact</h5>
+                    <p class="card-text text-muted">Want to reach out? Send me a message or find me online.</p>
+                    <a asp-controller="Home" asp-action="ContactMe" class="btn btn-outline-primary btn-sm">Contact Me</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
